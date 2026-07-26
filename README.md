@@ -15,7 +15,7 @@
 
 ---
 
-![image-20260726110042421](/Users/hexiaoxiao/Library/Application Support/typora-user-images/image-20260726110042421.png)
+![image](https://github.com/374046604/douyin-wife/blob/main/code.png)
 
 ## 2. 运行环境
 
