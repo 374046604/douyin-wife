@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "潮汐观察台采集器",
+  "description": "将已授权直播页面中可见的事件发送到本地潮汐观察台。",
+  "version": "0.1.0",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["http://127.0.0.1:8787/*"],
+  "action": { "default_popup": "popup.html", "default_title": "潮汐观察台采集器" },
+  "background": { "service_worker": "service-worker.js", "type": "module" },
+  "content_scripts": [
+    {
+      "matches": ["*://*.douyin.com/*"],
+      "js": ["content.js"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ]
+}

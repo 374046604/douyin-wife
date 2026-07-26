@@ -1,0 +1,21 @@
+{
+  "rooms": [],
+  "events": [],
+  "config": {
+    "ingestKey": "28e584557ab44e4f9a99a50f60e87544"
+  },
+  "alertRules": [],
+  "alerts": [],
+  "webSnapshots": [],
+  "licenses": [
+    {
+      "id": "license-888e25a8-29c6-470a-bae0-c2799c049227",
+      "codeHash": "e666b5bd840437f51b2cf14f4f9891175deac3bd88e501c41246a513fc008a02",
+      "codeHint": "11F2",
+      "durationDays": 30,
+      "maxActivations": 1,
+      "createdAt": "2026-07-26T02:54:38.316Z",
+      "activations": []
+    }
+  ]
+}

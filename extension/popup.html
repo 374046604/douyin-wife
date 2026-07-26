@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><link rel="stylesheet" href="popup.css" /><title>潮汐采集器</title></head>
+  <body>
+    <main>
+      <p class="eyebrow">TIDE OBSERVER</p><h1>页面采集器</h1>
+        <p class="hint">仅在已授权页面使用。打开已登记直播间后会自动连接本地观察台；默认识别可见弹幕，识别失败时再填写下面的手动选择器。</p>
+      <form id="settings-form">
+        <label>本地接收地址<input name="endpoint" value="http://127.0.0.1:8787/api/ingest" required /></label>
+        <label>扩展授权令牌<input name="licenseToken" type="password" placeholder="从观察台“采集器连接”复制" required /></label>
+        <label>采集密钥（仅手动配置时需要）<input name="key" placeholder="从观察台复制" /></label>
+        <label>直播间 ID（仅手动配置时需要）<input name="roomId" placeholder="从观察台房间列表复制" /></label>
+        <label class="switch"><input name="autoDetect" type="checkbox" checked /> 自动识别可见昵称和弹幕</label>
+        <hr />
+        <label>事件容器 CSS 选择器（自动识别失败时再填）<input name="eventSelector" placeholder="例如 .comment-item" /></label>
+        <label>昵称 CSS 选择器（自动识别失败时再填）<input name="nicknameSelector" placeholder="例如 .author" /></label>
+        <label>内容 CSS 选择器（自动识别失败时再填）<input name="messageSelector" placeholder="例如 .message" /></label>
+        <label>公开标识 CSS 选择器（可选）<input name="accountSelector" placeholder="例如 [data-account-id]" /></label>
+        <label>事件类型<select name="eventKind"><option value="comment">公开弹幕</option><option value="entry">进入直播间</option></select></label>
+        <button type="submit">保存并开始观察</button><p id="status" role="status"></p>
+      </form>
+    </main><script src="popup.js"></script>
+  </body>
+</html>
